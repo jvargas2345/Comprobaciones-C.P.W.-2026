@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jennifer Vargas Gutierrez">
+    <meta name="description"
+        content="La biblioteca Letras abiertas es una bilioteca de uso publico, se ofrece una gran variedad de libros y informacion para todo tipo de publico,abierto para Jovenes y personas adultas mayores,personas interesadas en el aprendizaje, lectura, conocimiento y actividades que se comparten de forma cultural ">
+    <meta name="keywords" content="Leer, Libros,conocimiento,bibliografía,autor, poesía, aprendizaje, conocimiento">
+
+    <title> Inicio | Letras Abiertas </title>
+    <link rel="icon" href="recursos/Librosfavicon.ico" type="image/icon">
+</head>
+
+<!--Inicio de el body-->
+
+<body>
+    <!--Inicio de el header-->
+    <header>
+        <!--Titulo de la pagina  Y slogan de la pagina-->
+        <h1>Nuestros servicios</h1>
+        <p>Porque tambien apoyamos a la comunidad</p>
+
+        <!--Menu de la pagina con listas desordenadas-->
+        <nav>
+            <ul>
+                <!--Direccion de paginas dentro de el menu-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contactos.html">contactos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Nuestros servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="30" />
+                </p>
+                <p>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{8}"
+                        title="Ingrese un número de teléfono válido de 8 dígitos" />
+                </p>
+                <p>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="18" max="80" step="1" required />
+                </p>
+                <p>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información laboral extra a rellenar a consideracion</legend>
+                <p>
+                    <label for="trabajo">Tipos de puestos disponibles:</label>
+                    <select id="trabajo" name="trabajo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="1">Informático</option>
+                        <option value="2">Técnico en mantenimiento</option>
+                        <option value="3">Guardia de seguridad</option>
+                        <option value="4">Conserje</option>
+                        <option value="5">Bibliotecario</option>
+                        <option value="6">Exportador de productos</option>
+                    </select>
+                </p>
+
+
+               <p>
+                <input type="radio" id="presencial" name="modalidad" value="presencial" required />
+                <label for="presencial">Presencial</label>
+                <input type="radio" id="virtual" name="modalidad" value="virtual" />
+                <label for="virtual">Virtual</label>
+                </p>
+
+                <p>
+                    <label for="comentarios">Rango salarial:</label><br />
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="20" minlength="5"
+                        maxlength="400"></textarea>
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="checkbox" id="terminos" name="terminos" required />
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </p>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+
+
+
+        <!--Inicio de el footer-->
+        <footer>
+            <h2>Contacto</h2>
+
+            <address>
+                <a href="https://maps.app.goo.gl/NpQCwGDfZ4486R2JA" target="_blank" rel="noopener noreferrer">Ubicacion
+                    San
+                    jose, Costa Rica,av.8, biblioteca Letras abiertas</a>
+                <p>Teléfono: +506 8899-0000</p>
+                <a href="mailto:info@bibliotecapublicaLetrasAbiertas.com">info@bibliotecapublicaLetrasAbiertas.com</a>
+            </address>
+
+            <p>
+                <small>&copy; 2026 Biblioteca publica Letras Abiertas. Todos los derechos reservados.</small>
+            </p>
+        </footer>
+</body>
+
+</html>
