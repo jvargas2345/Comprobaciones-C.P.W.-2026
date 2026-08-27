@@ -1,0 +1,489 @@
+/*Familia externa*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colores */
+:root {
+    --color-verdemarca: #274C56;
+    --color-verdeo-oscuro-textoprincipal: #386641;
+    --color-amarillo-oscuro-textosecundario: #D96C2C;
+    --color-verde-agua_fondo: #3E8E7E;
+    --color-verde-claro-botones: #A7C957;
+    --color-celeste-claro-borde-separaciones: #7FC4F2;
+
+    /* Espaciado */
+    --esp-xs: 0.8rem;
+    --esp-sm: 1.6rem;
+    --esp-md: 2.4rem;
+    --esp-lg: 4rem;
+    --esp-xl: 8rem;
+
+    /* Otros elementos */
+    --radio: 0.6rem;
+    --sombra-1: 0 0.2rem 0.6rem rgba(0,0,0,.06);
+    --sombra-2: 0 0.4rem 1.2rem rgba(0,0,0,.10);
+    --sombra-3: 0 0.8rem 2rem rgba(0,0,0,.16);
+    --transicion: 0.25s ease;
+    --ancho-max: 120rem;
+}
+
+/* Tamaño fuente */
+html {
+    font-size: 62.5%;
+}
+
+/* Tipografia */
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: var(--color-verde-agua_fondo);
+    color: #333;
+}
+
+/* Jerarquia */
+h1 {
+    font-size: 4rem;
+    color: var(--color-verdemarca);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.2rem;
+    color: var(--color-verdemarca);
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin: 10px;
+    color: var(--color-verdemarca);
+}
+
+/* Parrafos */
+p {
+    margin-bottom: var(--esp-sm);
+    color: var(--color-amarillo-oscuro-textosecundario);
+}
+
+/* Enlaces */
+a {
+    color: #5F8F18;
+    transition: var(--transicion);
+}
+
+/* Cabecera */
+
+#cabecera {
+    background-color: beige;
+    text-align: center;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    max-width: 80rem;
+    border: 1px solid var(--color-verdemarca);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+}
+
+.identidad {
+    text-align: center;
+}
+
+.identidad p {
+    color: #D96C2C;
+    text-align: center;
+}
+
+/*Nav*/
+.navegacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.navegacion > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navegacion a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+/*Pseudo-clase*/
+
+/* Cursor encima */
+a:hover {
+    background-color: #C9B79C;
+    font-weight: 600;
+    border-radius: var(--radio);
+}
+
+/* Foco con teclado */
+a:focus {
+    outline: 3px solid var(--color-celeste-claro-borde-separaciones);
+    outline-offset: 3px;
+}
+
+/* Mientras se hace clic */
+a:active {
+    color: var(--color-verdemarca);
+    background-color: var(--color-verde-claro-botones);
+}
+
+/* Elemento impar */
+.bloque:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* pseudo elemento */
+
+.accion::before {
+    content: "→ ";
+}
+
+/*Contenido-principal*/
+#principal {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Bienvenida*/
+#bienvenida {
+    background-color: white;
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 60rem;
+    padding: 2rem;
+    border: 1px solid #283F12;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+    color: #333;
+}
+
+#bienvenida h2 {
+    margin-bottom: 1rem;
+}
+
+/* Servicios*/
+#servicios {
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #C48849;
+    border-radius: var(--radio);
+    background-color: #FBF3D0;
+    text-align: center;
+    box-shadow: var(--sombra-2);
+}
+
+/* maquetacion */
+.bloques-servicio {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Los tres bloques */
+.bloque {
+    display: block;
+    flex: 1 1 0;
+    padding: 1.5rem;
+    border-radius: var(--radio);
+}
+
+/*Origen */
+
+#origen {
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid var(--color-celeste-claro-borde-separaciones);
+    border-radius: var(--radio);
+    background-color:#DCE8B4;
+}
+
+.testimonio {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 5px solid var(--color-verde-claro-botones);
+}
+
+.testimonio-autoria {
+    color: var(--color-verdemarca);
+}
+
+/*Id nota lateral*/   
+#nota {
+    position: absolute;
+    top: 40rem;
+    right: 2rem;
+
+    width: 20rem;
+    padding: 2rem;
+
+    background-color: #FBF3D0;
+    border: 1px solid #C48849;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+}
+
+/* Footer */
+
+#pie {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: beige;
+    border-top: 1px solid var(--color-verdemarca);
+}
+
+.contenido-pie {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+}
+
+.direccion {
+    color: var(--color-verdemarca);
+}
+
+.derechos {
+    margin-top: 1rem;
+}
+
+/* Plantas */
+
+.sumario {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #FBF3D0;
+    border: 1px solid #C48849;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+}
+
+.sumario ul {
+    padding-left: 2rem;
+}
+
+/*Tablas*/
+
+.tabla-especies {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.tabla-especies caption {
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.tabla-especies th,
+.tabla-especies td {
+    padding: 1rem;
+    border: 1px solid var(--color-verdemarca);
+    text-align: left;
+}
+
+.tabla-especies thead {
+    background-color: var(--color-verdemarca);
+    color: white;
+}
+
+.tabla-especies thead th {
+    color: white;
+}
+
+.tabla-especies tbody tr:nth-child(even) {
+    background-color: #EEF4DD;
+}
+
+.tabla-especies tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+.tabla-especies tfoot {
+    background-color: #FBF3D0;
+    font-weight: bold;
+}
+
+/* Grupos*/
+
+/* rejilla de dos dimensiones */
+#grupos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #FBF3D0;
+    border: 1px solid #C48849;
+    border-radius: var(--radio);
+}
+
+/* formulario*/
+
+.formulario-encargo {
+    margin: 2rem 0;
+}
+
+.seccion-campos {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--color-verdemarca);
+    border-radius: var(--radio);
+    background-color: #FBF3D0;
+}
+
+.seccion-campos legend {
+    padding: 0 1rem;
+    font-weight: bold;
+    color: var(--color-verdemarca);
+}
+
+.linea-campo {
+    margin-bottom: 1.5rem;
+}
+
+.linea-campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-verdemarca);
+}
+
+.linea-campo input,
+.linea-campo select,
+.linea-campo textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #7A7A7A;
+    border-radius: var(--radio);
+    font: inherit;
+    background-color: white;
+}
+
+/* Foco visible */
+.linea-campo input:focus,
+.linea-campo select:focus,
+.linea-campo textarea:focus {
+    outline: 3px solid var(--color-celeste-claro-borde-separaciones);
+    outline-offset: 2px;
+    border-color: var(--color-verdemarca);
+}
+
+/* Opciones */
+.seccion-opciones {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid #C48849;
+    border-radius: var(--radio);
+}
+
+.opcion-radio {
+    margin-bottom: 0.8rem;
+}
+
+.opcion-radio label {
+    color: var(--color-verdemarca);
+}
+
+/*Botones*/
+.fila-acciones {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.accion {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radio);
+    cursor: pointer;
+    font: inherit;
+    transition: var(--transicion);
+}
+
+.accion-primaria {
+    background-color: var(--color-verde-claro-botones);
+    color: var(--color-verdemarca);
+}
+
+.accion-secundaria {
+    background-color: #C9B79C;
+    color: var(--color-verdemarca);
+}
+
+/* Estado hover de botones */
+.accion:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-2);
+}
+
+/* Estado focus de botones */
+.accion:focus {
+    outline: 3px solid var(--color-celeste-claro-borde-separaciones);
+    outline-offset: 3px;
+}
+
+/* Estado activo */
+.accion:active {
+    transform: scale(0.97);
+}
+
+/*Listas y glosario */
+
+.lista-grupos {
+    padding-left: 2rem;
+}
+
+.lista-grupos ul {
+    padding-left: 2rem;
+}
+
+.terminos {
+    margin-top: 1.5rem;
+}
+
+.terminos dt {
+    font-weight: bold;
+    color: var(--color-verdemarca);
+    margin-top: 1rem;
+}
+
+.terminos dd {
+    margin-left: 2rem;
+}
+
+/*Moviemiento*/
+a,
+.accion {
+    transition: var(--transicion);
+}
+
+.accion:hover {
+    transform: translateY(-2px);
+}
+
+/* Respeta movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
